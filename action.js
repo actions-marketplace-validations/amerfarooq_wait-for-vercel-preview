@@ -34,6 +34,7 @@ const waitForUrl = async ({
 
         headers = {
           Cookie: `_vercel_jwt=${jwt}`,
+          "x-vercel-protection-bypass": vercelPassword
         };
 
         core.setOutput('vercel_jwt', jwt);
